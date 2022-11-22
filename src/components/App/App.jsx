@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { ContactList } from '../ContactsList/ContactsList';
-import { AddContact } from 'components/AddContact/AddContact';
-import { Filter } from 'components/Filter/Filter';
+import ContactList from 'components/ContactList';
+import AddContact from 'components/AddContact';
+import Filter from 'components/Filter';
 import css from './App.module.css';
 
 export class App extends Component {
@@ -51,7 +51,7 @@ export class App extends Component {
       <div>
         <p className={css.sectionHeading}>Phonebook</p>
         <AddContact onSubmit={this.addNewContact} />
-        <p className={css.sectionHeading}>Contacts:</p>
+        <p className={css.sectionHeading}>Contacts</p>
         <Filter onChange={this.filterContact} />
         <ContactList
           contacts={this.filteredContacts()}

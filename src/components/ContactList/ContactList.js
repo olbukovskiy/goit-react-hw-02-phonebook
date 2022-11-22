@@ -1,8 +1,8 @@
 import React from 'react';
 import { ContactsList } from './ContactsList.styled';
-import { Contact } from 'components/Contact/Contact';
+import Contact from 'components/Contact';
 
-export function ContactList({ contacts, onChange }) {
+export default function ContactList({ contacts, onChange }) {
   return (
     <ContactsList>
       {contacts.map(contact => {

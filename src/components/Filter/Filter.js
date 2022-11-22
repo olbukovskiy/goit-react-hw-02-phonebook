@@ -1,12 +1,14 @@
 import React from 'react';
+import { Label, Input } from 'components/AddContact/AddContact.styled';
+import { Wrapper } from './Filter.styled';
 
-export function Filter({ onChange }) {
+export default function Filter({ onChange }) {
   return (
-    <div>
-      <label>
-        Find contacts by name
-        <input type="text" onChange={onChange} />
-      </label>
-    </div>
+    <Wrapper>
+      <Label>
+        Find contacts by name:
+        <Input type="text" onChange={onChange} />
+      </Label>
+    </Wrapper>
   );
 }
