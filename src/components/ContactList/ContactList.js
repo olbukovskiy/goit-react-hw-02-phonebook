@@ -6,14 +6,14 @@ import PropTypes from 'prop-types';
 export default function ContactList({ contacts, onChange }) {
   return (
     <ContactsList>
-      {contacts.map(contact => {
+      {contacts.map(({ id, name, number }) => {
         return (
           <Contact
-            key={contact.id}
-            id={contact.id}
-            name={contact.name}
-            number={contact.number}
-            onChange={onChange}
+            key={id}
+            id={id}
+            name={name}
+            number={number}
+            onChangeResult={() => onChange(id)}
           />
         );
       })}
