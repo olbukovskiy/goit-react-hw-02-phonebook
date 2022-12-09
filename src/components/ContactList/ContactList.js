@@ -1,7 +1,9 @@
 import React from 'react';
-import { ContactsList } from './ContactsList.styled';
-import Contact from 'components/Contact';
 import PropTypes from 'prop-types';
+
+import Contact from 'components/Contact';
+
+import { ContactsList } from './ContactsList.styled';
 
 export default function ContactList({ contacts, onChange }) {
   return (
